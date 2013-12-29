@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Ziel Datei aus mehreren .md Dateien">
+  <title>Pandoc Test</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  <link rel="stylesheet" href="statik.css">
+</head>
+<body>
+<header>
+<h1 class="title">Pandoc Test</h1>
+<h2 class="author">Ziel Datei aus mehreren .md Dateien</h2>
+<h3 class="date">Stefan Blechschmidt, Dez. 2013</h3>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#makefile">Makefile</a><ul>
+<li><a href="#erklärung-der-pandoc-parameter">Erklärung der pandoc Parameter</a></li>
+</ul></li>
+<li><a href="#datei-aufbau">Datei Aufbau</a></li>
+</ul>
+</nav>
+<p>Dies ist ein Versuch mit Pandoc eine HTML Datei zu erstellen die aus mehreren Einzeldateien besteht.</p>
+<p>Als Formatierung wird die Vorlage der <code>statik.css</code> aus Rumex <span class="citation" data-cites="rumex">(<span style="font-variant: small-caps;">Stefan Blechschmidt</span>, 2013)</span> verwendet.</p>
+<h1 id="makefile"><a href="#makefile">Makefile</a></h1>
+<p>Erstellt wird die <code>index.html</code> Datei mittels <code>make</code>. Der Aufbau der <code>Makefile</code> Datei:</p>
+<pre class="sourceCode makefile"><code class="sourceCode makefile"><span class="co"># Makedatei für die Erstellung der</span>
+<span class="co"># html Datei</span>
+<span class="co">#</span>
+
+
+<span class="dv">html:</span><span class="dt"> Makefile</span>
+    make -s index.html
+
+<span class="dv">index.html:</span><span class="dt"> *.md haupt.bib </span>
+    pandoc -f markdown -t html5 <span class="ch">\</span>
+        <span class="ch">-</span><span class="fu">s </span><span class="ch">\</span>
+        <span class="ch">-</span><span class="fu">-css statik.css </span><span class="ch">\</span>
+        <span class="ch">-</span><span class="fu">-toc </span><span class="ch">\</span>
+        <span class="ch">-</span><span class="fu">-bibliography=haupt.bib </span><span class="ch">\</span>
+        <span class="ch">-</span><span class="fu">-csl=din-1505-2.csl </span><span class="ch">\</span>
+        <span class="ch">-</span><span class="fu">-toc-depth=2 </span><span class="ch">\</span>
+        <span class="ch">-</span><span class="fu">o index.html *.md</span></code></pre>
+<h2 id="erklärung-der-pandoc-parameter"><a href="#erklärung-der-pandoc-parameter">Erklärung der pandoc Parameter</a></h2>
+<ul>
+<li><strong><code>-f</code></strong> Eingabe Sprache</li>
+<li><strong><code>-t</code></strong> Ausgabe Sprache</li>
+<li><strong><code>-s</code></strong> HTML Grundgerüst</li>
+<li><strong><code>--bibliography</code></strong> Literatur Einträge</li>
+<li><strong><code>--csl</code></strong> Vorlage für das Literaturverzeichnis</li>
+<li><strong><code>--toc</code></strong> Inhaltsverzeichnis anzeigen</li>
+<li><strong><code>--toc-depth</code></strong> Anzahl der Überschriften die angezeigt werden</li>
+<li><strong><code>-o</code></strong> Ziel Datei</li>
+</ul>
+<h1 id="datei-aufbau"><a href="#datei-aufbau">Datei Aufbau</a></h1>
+<p>Die Einzeldateien sind folgendermaßen aufgebaut.</p>
+<ul>
+<li>000-start.md</li>
+<li>100-vorwort.md</li>
+<li>200-kapitel1.md</li>
+<li>300-kapitel2.md</li>
+<li>999-ende.md</li>
+</ul>
+<hr />
+<p>Hier ist der Aufbau der geteilten Zusammenstellung zu Ende.</p>
+<div class="references">
+<p><span style="font-variant: small-caps;">Stefan Blechschmidt</span>: <em>Der Homepage Baukasten</em>. URL <a href="http://www.it-bayer.de/rumex/">http://www.it-bayer.de/rumex/</a></p>
+</div>
+</body>
+</html>
