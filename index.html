@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <meta name="author" content="Ziel Datei aus mehreren .md Dateien">
-  <title>Pandoc Test</title>
+  <meta name="author" content="Kleine HTML Seite mit pandoc und markdown">
+  <title>Cirsium</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -33,9 +33,9 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </head>
 <body>
 <header>
-<h1 class="title">Pandoc Test</h1>
-<h2 class="author">Ziel Datei aus mehreren .md Dateien</h2>
-<h3 class="date">Stefan Blechschmidt, Dez. 2013</h3>
+<h1 class="title">Cirsium</h1>
+<h2 class="author">Kleine HTML Seite mit pandoc und markdown</h2>
+<h3 class="date">auf github.com - itbayer, Dez. 2013</h3>
 </header>
 <nav id="TOC">
 <ul>
@@ -45,8 +45,8 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#datei-aufbau">Datei Aufbau</a></li>
 </ul>
 </nav>
-<p>Dies ist ein Versuch mit Pandoc eine HTML Datei zu erstellen die aus mehreren Einzeldateien besteht.</p>
-<p>Als Formatierung wird die Vorlage der <code>statik.css</code> aus Rumex <span class="citation" data-cites="rumex">(<span style="font-variant: small-caps;">Stefan Blechschmidt</span>, 2013)</span> verwendet.</p>
+<p>Dies ist eine Auskopplung der Statik<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> Funktion aus <a href="http://www.it-bayer.de/rumex">Rumex</a> <span class="citation" data-cites="rumex">(<span style="font-variant: small-caps;">Stefan Blechschmidt</span>, 2013)</span> und ermöglicht es eine einfache HTML Seite<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> zu erstellen.</p>
+<p>Verweise auf externe Literatur <em>&quot;Literaturverzeichnis&quot;</em> werden auch unterstützt.</p>
 <h1 id="makefile"><a href="#makefile">Makefile</a></h1>
 <p>Erstellt wird die <code>index.html</code> Datei mittels <code>make</code>. Der Aufbau der <code>Makefile</code> Datei:</p>
 <pre class="sourceCode makefile"><code class="sourceCode makefile"><span class="co"># Makedatei für die Erstellung der</span>
@@ -78,18 +78,35 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><strong><code>-o</code></strong> Ziel Datei</li>
 </ul>
 <h1 id="datei-aufbau"><a href="#datei-aufbau">Datei Aufbau</a></h1>
-<p>Die Einzeldateien sind folgendermaßen aufgebaut.</p>
+<p>Die Einzeldateien sind folgendermaßen aufgebaut. Können aber ohne weiteres erweitert werden.</p>
 <ul>
 <li>000-start.md</li>
 <li>100-vorwort.md</li>
 <li>200-kapitel1.md</li>
 <li>300-kapitel2.md</li>
+<li>400-kapitel3.md</li>
 <li>999-ende.md</li>
 </ul>
 <hr />
-<p>Hier ist der Aufbau der geteilten Zusammenstellung zu Ende.</p>
+<p><strong>Impressum</strong></p>
+<p>Verwendung: Entwicklung</p>
+<p>Stefan Blechschmidt<br />Auggenbach 9<br />94357 Konzell</p>
+<p>Kontakt: <script type="text/javascript">
+<!--
+h='&#x69;&#116;&#x2d;&#98;&#x61;&#x79;&#x65;&#114;&#46;&#100;&#x65;';a='&#64;';n='&#x73;&#98;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+'sbATit-bayerPUNKTde'+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x73;&#98;&#x41;&#84;&#x69;&#116;&#x2d;&#98;&#x61;&#x79;&#x65;&#114;&#80;&#x55;&#78;&#x4b;&#84;&#100;&#x65;&#32;&#40;&#x73;&#98;&#32;&#x61;&#116;&#32;&#x69;&#116;&#x2d;&#98;&#x61;&#x79;&#x65;&#114;&#32;&#100;&#x6f;&#116;&#32;&#100;&#x65;&#x29;</noscript></p>
+<hr />
 <div class="references">
 <p><span style="font-variant: small-caps;">Stefan Blechschmidt</span>: <em>Der Homepage Baukasten</em>. URL <a href="http://www.it-bayer.de/rumex/">http://www.it-bayer.de/rumex/</a></p>
 </div>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Als Formatierung wird die Vorlage der <code>statik.css</code> aus Rumex verwendet.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Funktioniert natürlich auch auf github.com.<a href="#fnref2">↩</a></p></li>
+</ol>
+</section>
 </body>
 </html>

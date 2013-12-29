@@ -1,4 +1,4 @@
-% Pandoc Test
-% Ziel Datei aus mehreren .md Dateien
-% Stefan Blechschmidt, Dez. 2013
+% Cirsium
+% Kleine HTML Seite mit pandoc und markdown
+% auf github.com - itbayer, Dez. 2013
 
