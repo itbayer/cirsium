@@ -1,57 +1,46 @@
 Dies ist eine Auskopplung der Statik[^1] Funktion aus
 [Rumex](http://www.it-bayer.de/rumex) [@rumex] und ermöglicht es eine
-einfache HTML Seite zu erstellen.
+einfache HTML Seite[^2] zu erstellen.
+
+Verweise auf externe Literatur *"Literaturverzeichnis"* werden
+unterstützt.
 
 Makefile
 ========
 
-Erstellt wird die `index.html` Datei mittels `make`. Der Aufbau der
-`Makefile` Datei:
+Die Seite wird mittels `make` erstellt
 
-~~~~ {.makefile}
-# Makedatei für die Erstellung der
-# html Datei
-#
+-   `make`
 
+oder einzeln
 
-html: Makefile
-    make -s index.html
+-   `make html` bzw. `make index.html`
+-   `make pdf` bzw. `make index.pdf`
 
-index.html: *.md haupt.bib 
-    pandoc -f markdown -t html5 \
-        -s \
-        --css statik.css \
-        --toc \
-        --bibliography=haupt.bib \
-        --csl=din-1505-2.csl \
-        --toc-depth=2 \
-        -o index.html *.md
-~~~~
+Einstellung der Verzeichnistiefe
+--------------------------------
 
-Erklärung der pandoc Parameter
-------------------------------
+In der Datei `Makefile` kann über die Variabel `TD` die Verzeichnistiefe
+eingestellt werden. Die angegebene Zahl bestimmt die Tiefe. Wird die
+Variable kommentiert, wird kein Verzeichnis angezeigt.
 
--   **`-f`** Eingabe Sprache
--   **`-t`** Ausgabe Sprache
--   **`-s`** HTML Grundgerüst
--   **`--bibliography`** Literatur Einträge
--   **`--csl`** Vorlage für das Literaturverzeichnis
--   **`--toc`** Inhaltsverzeichnis anzeigen
--   **`--toc-depth`** Anzahl der Überschriften die angezeigt werden
--   **`-o`** Ziel Datei
+Standard = 1.
 
 Datei Aufbau
 ============
 
-Die Einzeldateien sind folgendermaßen aufgebaut. Können aber ohne
-weiteres erweitert werden.
+Die Sortierung der Text Daten wird durch eine Vornummer bestimmt.
+
+Beispiel:
 
 -   000-start.md
 -   100-vorwort.md
--   200-kapitel1.md
--   300-kapitel2.md
--   400-kapitel3.md
+-   200-k1.md
+-   300-k2.md
+-   400-k3.md
 -   999-ende.md
 
 [^1]: Als Formatierung wird die Vorlage der `statik.css` aus Rumex
     verwendet.
+
+[^2]: Funktioniert natürlich auch auf github.com.

@@ -7,4 +7,4 @@ und ermöglicht es eine einfache HTML Seite[^github] zu erstellen.
 [^github]: Funktioniert natürlich auch auf github.com.
 
 
-Verweise auf externe Literatur _"Literaturverzeichnis"_ werden auch unterstützt.
+Verweise auf externe Literatur _"Literaturverzeichnis"_ werden unterstützt.
