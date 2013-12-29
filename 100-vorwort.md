@@ -1,7 +1,7 @@
-Dies ist ein Versuch mit Pandoc eine 
-HTML Datei zu erstellen
-die aus mehreren Einzeldateien besteht.
+Dies ist eine Auskopplung der Statik[^cssrumex] Funktion aus 
+[Rumex](http://www.it-bayer.de/rumex) [@rumex]
+und ermöglicht es eine einfache HTML Seite zu erstellen.
 
-Als Formatierung wird die Vorlage der `statik.css` aus Rumex [@rumex] verwendet.
+[^cssrumex]: Als Formatierung wird die Vorlage der `statik.css` aus Rumex  verwendet.
 
 
