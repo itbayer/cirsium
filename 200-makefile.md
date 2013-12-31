@@ -8,6 +8,11 @@ oder einzeln
 
 - `make html` bzw. `make index.html`
 - `make pdf` bzw. `make index.pdf`
+- `make README.markdown`
+
+Dabei wird auch die github.com README Datei aus den Einzel Dateien
+aktualisiert. 
+
 
 
 ## Einstellung der Verzeichnistiefe
@@ -18,6 +23,9 @@ Die angegebene Zahl bestimmt die Tiefe.
 Wird die Variable kommentiert, wird kein Verzeichnis angezeigt.
 
 Standard = 1.
+
+Siehe dazu auch [`Makefile`](https://raw.github.com/itbayer/cirsium/gh-pages/Makefile).
+
 
 # Installation
 
