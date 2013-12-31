@@ -19,3 +19,16 @@ Wird die Variable kommentiert, wird kein Verzeichnis angezeigt.
 
 Standard = 1.
 
+# Installation
+
+- Download:
+<https://github.com/itbayer/cirsium/archive/gh-pages.zip>
+- Verzeichnis erstellen
+- Archiv im Verzeichnis entpacken
+- Dateien editieren
+- make
+- Dateien veröffentlichen
+
+
+
+
