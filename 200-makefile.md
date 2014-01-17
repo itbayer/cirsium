@@ -13,6 +13,15 @@ oder einzeln
 Dabei wird auch die github.com README Datei aus den Einzel Dateien
 aktualisiert. 
 
+**Achtung:** Hier muss in der [Makefile](Makefile) Datei evtl. nach editiert werden.
+Zur Zeit wird die README.markdown aus den Dateien 
+
+- 100-vorwort.md 
+- 200-makefile.md 
+- 300-datei_aufbau.md
+
+erstellt.
+
 
 
 ## Einstellung der Verzeichnistiefe
