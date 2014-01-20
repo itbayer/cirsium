@@ -47,5 +47,3 @@ Siehe dazu auch [`Makefile`](https://raw.github.com/itbayer/cirsium/gh-pages/Mak
 - Dateien veröffentlichen
 
 
-
-

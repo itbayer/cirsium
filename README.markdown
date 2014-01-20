@@ -65,6 +65,13 @@ Beispiel:
 -   300-datei\_aufbau.md
 -   999-ende.md
 
+Bugs
+====
+
+-   ~~Sprach - Einstellung für PDF Ausgabe~~
+-   ~~Überschrift Literaturverzeichnis wird in der PDF Ausgabe nicht
+    angezeigt.~~
+
 [^1]: Als Formatierung wird die Vorlage der `statik.css` aus Rumex
     verwendet.
 

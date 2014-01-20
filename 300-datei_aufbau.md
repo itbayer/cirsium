@@ -12,3 +12,8 @@ Beispiel:
 - 999-ende.md
 
 
+# Bugs
+
+- ~~Sprach - Einstellung für PDF Ausgabe~~
+- ~~Überschrift Literaturverzeichnis wird in der PDF Ausgabe nicht angezeigt.~~
+

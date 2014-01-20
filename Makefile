@@ -31,6 +31,14 @@ ifdef TD
 	TOC = --toc --toc-depth=$(TD)
 endif
 
+# Sprache für die PDF Erstellung
+LANG = ngermanb
+
+ifdef LANG
+	PDF_LANG_OPTION = -V lang=$(LANG)
+endif
+
+
 
 
 
@@ -70,6 +78,7 @@ $(PDF): *.md $(BIB)
 	$(PD) -f markdown -t latex \
 		-s \
 		$(TOC) \
+		$(PDF_LANG_OPTION) \
 		--bibliography=$(BIB) \
 		--csl=$(CSL) \
 		-o $(PDF) *.md

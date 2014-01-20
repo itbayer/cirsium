@@ -1,8 +1,5 @@
-/* .rx/default/f5.css */
+/* cirsium/statik.css */
 
-/* ****************************************************
- * Allgemeine Einstellungen
- */
 
 @media all {
 
@@ -124,7 +121,11 @@
 		content: "Abbildung " counter(bild) ": "; /*... und Beschriftung voranstellen. */
 	}
 
-	/* Literatur Verzeichnis beschriften */
+	/* Literatur Verzeichnis beschriften 
+	 * ---------------------------------
+	 * Ausgeschaltet Überschrift wird in der Datei 
+	 * 999-ende.md gesetzt. So wird diese Überschrift
+	 * auch in der PDF Ausgabe übernommen.
 	.references:before {
 		content: "Literaturverzeichnis";
 		display: block;
@@ -132,6 +133,7 @@
 		margin-top: 4em;
 		font-weight: bold;
 	}
+	*/
 
 	/* Durchgestrichene Elemente abblenden */
 	del {
