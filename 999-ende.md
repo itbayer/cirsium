@@ -3,7 +3,7 @@
 ## Lizenz
 
 Dieses Schriftstück veröffentliche ich mit den Bedienungen der 
-[by-nc-sa Lizenz](http://creativecommons.org/licenses/by-nc-sa/3.0/de/).
+[cc-by-nc-sa Lizenz](http://creativecommons.org/licenses/by-nc-sa/3.0/de/).
 
 - **Namensnennung** - Sie müssen den Namen des Autors/Rechteinhabers in der von ihm festgelegten Weise nennen.
 - **Keine kommerzielle Nutzung** - Dieses Werk bzw. dieser Inhalt darf nicht für kommerzielle Zwecke verwendet werden.
